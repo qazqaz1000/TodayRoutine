@@ -2,7 +2,7 @@ import React from "react";
 import {View, Text} from "react-native";
 
 
-const HomeScreen = () => (
+const SecondScreen = () => (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <Text>hi home</Text>
         
@@ -13,4 +13,4 @@ const HomeScreen = () => (
     </View>
 )
 
-export default HomeScreen;
+export default SecondScreen;

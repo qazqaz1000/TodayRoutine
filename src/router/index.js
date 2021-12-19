@@ -1,19 +1,20 @@
 import React from "react";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import HomeStackNav from "./HomeStackNav";
+import HomeBottomTabNav from "./HomeBottomTabNav";
+import SecondScreen from "../screens/SecondScreen";
 
 const RootStack = createNativeStackNavigator();
 
 const Router = () => (
     <RootStack.Navigator initialRouteName='RootHome'>
-        <RootStack.Screen name={"RootHome"} component={BottomHomeNavigator}
+        <RootStack.Screen name={"RootHome"} component={HomeBottomTabNav}
             options={{
                 headerShown: false,
             }}></RootStack.Screen>
         <RootStack.Screen
             name="Story"
-            component={StoryScreen}
+            component={SecondScreen}
             options={{
                 headerShown: false,
                 title: '정보'

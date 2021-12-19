@@ -66,9 +66,16 @@ const App: () => Node = () => {
     // <SafeAreaView style={backgroundStyle}>
       // <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <NavigationContainer>
+        <StatusBar barStyle="dark-content" />
         <Router></Router>
       </NavigationContainer>
     // {/* </SafeAreaView> */}
+    // <View>
+    //   <Text>asdfnjasdhfklasdjlkf</Text>
+    //   <Text>asdfnjasdhfklasdjlkf</Text>
+    //   <Text>asdfnjasdhfklasdjlkf</Text>
+    //   <Text>asdfnjasdhfklasdjlkf</Text>
+    // </View>
   );
 };
 
