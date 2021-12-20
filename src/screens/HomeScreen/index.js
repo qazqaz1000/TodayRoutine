@@ -1,10 +1,15 @@
 import React from "react";
-import {View, Text} from "react-native";
+import {ScrollView, View, Text, SafeAreaView} from "react-native";
 
+import styles from "./styles";
 
 
 const HomeScreen = () => (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <SafeAreaView
+      style={styles.safeAreaContainer}
+    >
+      <Text>This is top text.</Text>
+      <ScrollView style={styles.scrollView}>
         <Text>hi home</Text>
         <Text>hi home</Text>
         <Text>hi home</Text>
@@ -12,12 +17,68 @@ const HomeScreen = () => (
         <Text>hi home</Text>
         <Text>hi home</Text>
         <Text>hi home</Text>
-        
-        {/* <Post post={post} ></Post> */}
-        {/* <Feed></Feed> */}
-
-
-    </View>
+        <Text>hi home</Text>
+        <Text>hi 3home</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi hom4e</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi ho3me</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi hom1e</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi ho3me</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi hom1e</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi ho3me</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi hom1e</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi ho3me</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi hom1e</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi ho3me</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi hom1e</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+        <Text>hi home</Text>
+    </ScrollView>
+      <Text>This is bottom text.</Text>
+    </SafeAreaView>
 )
 
 export default HomeScreen;

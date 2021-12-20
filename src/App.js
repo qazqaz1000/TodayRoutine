@@ -28,6 +28,8 @@ import {
 
 import { NavigationContainer } from '@react-navigation/native';
 import Router from './router';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+
 
 const Section = ({children, title}): Node => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -65,10 +67,13 @@ const App: () => Node = () => {
   return (
     // <SafeAreaView style={backgroundStyle}>
       // <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+      <SafeAreaProvider>
       <NavigationContainer>
         <StatusBar barStyle="dark-content" />
         <Router></Router>
       </NavigationContainer>
+      </SafeAreaProvider>
+
     // {/* </SafeAreaView> */}
     // <View>
     //   <Text>asdfnjasdhfklasdjlkf</Text>

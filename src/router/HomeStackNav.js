@@ -9,6 +9,7 @@ import logo from '../assets/instagram.png';
 import HomeScreen from "../screens/HomeScreen";
 
 
+
 const HomeStack = createNativeStackNavigator();
 
 const HomeStackNav = () => (
@@ -16,22 +17,27 @@ const HomeStackNav = () => (
         <HomeStack.Screen name="StackHome"
             component={HomeScreen}
             options={{
-                title: 'Instagram',
-                headerLeft: () => (
-                    <Feather name="camera" size={25} color={'#000'}></Feather>
-                ),
-                headerTitle: () => (
-                    <Image source={require("../assets/instagram.png")} resizeMode="contain" style={{ width: 150, height: 50 }}></Image>
-
-                    // <Ionicons name="paper-plane-outline" size={25} color={'#000'}></Ionicons>
-                ),
-                headerRight: () => (
-                    <Ionicons name="paper-plane-outline" size={25} color={'#000'}></Ionicons>
-                )
+                // headerTitle : ""
+                headerShown : false
             }}
+            // options={{
+            //     title: 'Instagram',
+            //     headerLeft: () => (
+            //         <Feather name="camera" size={25} color={'#000'}></Feather>
+            //     ),
+            //     headerTitle: () => (
+            //         <Image source={require("../assets/instagram.png")} resizeMode="contain" style={{ width: 150, height: 50 }}></Image>
+
+            //         // <Ionicons name="paper-plane-outline" size={25} color={'#000'}></Ionicons>
+            //     ),
+            //     headerRight: () => (
+            //         <Ionicons name="paper-plane-outline" size={25} color={'#000'}></Ionicons>
+            //     )
+            // }}
         />
 
     </HomeStack.Navigator>
+
 )
 
 export default HomeStackNav;
