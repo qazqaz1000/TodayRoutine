@@ -3,8 +3,11 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import HomeBottomTabNav from "./HomeBottomTabNav";
 import SecondScreen from "../screens/SecondScreen";
+import { View, Text} from "react-native";
+import HomeScreen from "../screens/HomeScreen";
 
 const RootStack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator();
 
 const Router = () => (
     <RootStack.Navigator initialRouteName='RootHome'>
@@ -21,6 +24,7 @@ const Router = () => (
             }}
         />
     </RootStack.Navigator>
+
 )
 
 export default Router;
