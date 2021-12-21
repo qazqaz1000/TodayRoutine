@@ -66,13 +66,13 @@ const App: () => Node = () => {
 
   return (
     // <SafeAreaView style={backgroundStyle}>
-      // <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <SafeAreaProvider>
+    // <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+    <SafeAreaProvider>
       <NavigationContainer>
         <StatusBar barStyle="dark-content" />
         <Router></Router>
       </NavigationContainer>
-      </SafeAreaProvider>
+    </SafeAreaProvider>
 
     // {/* </SafeAreaView> */}
     // <View>

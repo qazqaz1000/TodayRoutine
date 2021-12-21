@@ -11,7 +11,7 @@ import HomeStackNav from "./HomeStackNav";
 import HomeScreen from "../screens/HomeScreen";
 import SecondScreen from "../screens/SecondScreen";
 const Tab = createBottomTabNavigator();
-
+import { SafeAreaView} from "react-native";
 const HomeBottomTabNav = () => (
     <Tab.Navigator
     screenOptions={({ route }) => ({
