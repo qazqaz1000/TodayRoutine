@@ -58,7 +58,7 @@ const Weather = () => {
                 setTempMin(wTempMin - KELVIN);
                 setTempMax(wTempMax - KELVIN);
                 setName(wName);
-                setFeelsLike(wTempFeelsLike);
+                setFeelsLike(wTempFeelsLike - KELVIN);
 
                 if (json.weather != null) {
                     setWeatherIcon(json.weather[0].icon);
