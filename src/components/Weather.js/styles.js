@@ -5,6 +5,7 @@ const styles = StyleSheet.create({
         width: '100%',
         justifyContent: 'space-between',
         alignItems: 'center',
+        marginVertical : 3,
     },
     weatherContainer: {
         flexDirection: 'row',

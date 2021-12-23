@@ -9,8 +9,8 @@ const SecondScreen = () => {
 
     return (
         <SafeAreaView>
-            <View>
-                <Weather></Weather>
+            <View >
+                <Weather ></Weather>
                 <Exchange></Exchange>
             </View>
         </SafeAreaView>

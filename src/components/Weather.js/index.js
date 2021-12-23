@@ -23,7 +23,7 @@ const Weather = () => {
 
     useEffect(() => {
         const json = getWeatherInfoAsync();
-        console.log(json);
+        // console.log(json);
     }, [longitude]);
 
     const geoLocation = () => {
@@ -46,7 +46,7 @@ const Weather = () => {
                 `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&lang=kr`
             );
             json = await response.json();
-            console.log(json);
+            // console.log(json);
             if (json.cod == 200) {
                 const wTemp = JSON.stringify(json.main.temp);
                 const wTempMin = JSON.stringify(json.main.temp_min);
