@@ -24,7 +24,8 @@
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.10.1",
     "react-native-vector-icons": "^9.0.0",
-    "recoil": "^0.5.2"
+    "recoil": "^0.5.2",
+    "yahoo-finance2": "^2.1.0"
   },
   "devDependencies": {
     "@babel/core": "7.16.5",
