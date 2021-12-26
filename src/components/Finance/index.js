@@ -1,36 +1,81 @@
-import React, { useEffect } from "react";
-import { View, Text, Button} from "react-native";
+import React, { useEffect, useState } from "react";
+import { View, Text, Button, FlatList, TouchableOpacity} from "react-native";
 import yahooFinance from 'yahoo-finance2';
+import styles from "./styles";
+
+const DATA = [
+    {
+        id: "AAPL",
+    }, {
+        id: "SBUX",
+    }, {
+        id: "MSFT",
+    }, {
+        id: "AMZN",
+    },
+]
+
+const Item = ({ item, onPress, backgroundColor, textColor }) => {
+    const [curPrice, setCurPrice] = useState(null);
+    
+    useEffect(() => {
+        func();
+    }, []);
+    const func = async () => {
+        try {
+            console.log("results");       
+            const quote = await yahooFinance.quote(item.id);
+            console.log(quote);
+            console.log(quote.regularMarketPrice);
+            setCurPrice(quote.regularMarketPrice);
+        } catch (error) {
+
+        }
+    }
+
+    return (
+        <TouchableOpacity onPress={onPress} style={[styles.item, backgroundColor]}>
+            <Text style={[styles.title, textColor]}>{item.id}</Text>
+            <Text style={[styles.title, textColor]}>{curPrice}</Text>
+        </TouchableOpacity>
+    );
+}
+
+
+
 
 const Finance = () => {
 
     // const yahooFinance = require('yahoo-finance2').default; // NOTE the .default
+    const [selectedId, setSelectedId] = useState(null);
 
-const func = async () =>{
-    try {
-        // const results = await yahooFinance.search('AAPL');
-        console.log("results");        
-        // const results = await yahooFInance.search('AAPL', { someOption: true, etc });
-        // console.log(results);        
-        const quote = await yahooFinance.quote('AAPL');
-        // const { regularMarketPrice as price, currency } = quote;
-        console.log(quote.regularMarketPrice);        
-    } catch (error) {
-        
-    }
-    // const results = await yahooFinance.search('AAPL');
-    // const results = await yahooFInance.search('AAPL', { someOption: true, etc });
-    // console.log(results);
-    // const quote = await yahooFinance.quote('AAPL');
-    // const { regularMarketPrice as price, currency } = quote;
-}
+
+
+    const renderItem = ({ item }) => {
+        const backgroundColor = item.id === selectedId ? "#6e3b6e" : "#f9c2ff";
+        const color = item.id === selectedId ? 'white' : 'black';
+
+        return (
+            <Item
+                item={item}
+                onPress={() => setSelectedId(item.id)}
+                backgroundColor={{ backgroundColor }}
+                textColor={{ color }}
+            />
+        );
+    };
 
 
     return (
         <View>
 
             <Text>ggggggg</Text>
-            <Button title="call" onPress={func}></Button>
+            <FlatList
+                data={DATA}
+                renderItem={renderItem}
+                keyExtractor={(item) => item.id}
+                extraData={selectedId}
+            />
         </View>
     )
 }
