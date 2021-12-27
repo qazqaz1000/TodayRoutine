@@ -6,12 +6,24 @@ import styles from "./styles";
 const DATA = [
     {
         id: "AAPL",
-    }, {
+    },
+    {
         id: "SBUX",
-    }, {
+    },
+    {
         id: "MSFT",
-    }, {
+    },
+    {
         id: "AMZN",
+    },
+    {
+        id: "MMM",
+    },
+    {
+        id: "NKE",
+    },
+    {
+        id: "NVDA",
     },
 ]
 
@@ -44,7 +56,7 @@ const Item = ({ item, onPress, backgroundColor, textColor }) => {
 
 
 
-const Finance = () => {
+const Finance = ({theme}) => {
 
     // const yahooFinance = require('yahoo-finance2').default; // NOTE the .default
     const [selectedId, setSelectedId] = useState(null);
@@ -52,7 +64,7 @@ const Finance = () => {
 
 
     const renderItem = ({ item }) => {
-        const backgroundColor = item.id === selectedId ? "#6e3b6e" : "#f9c2ff";
+        const backgroundColor = item.id === selectedId ? "#6e3b6e" : theme;
         const color = item.id === selectedId ? 'white' : 'black';
 
         return (
@@ -68,8 +80,6 @@ const Finance = () => {
 
     return (
         <View>
-
-            <Text>ggggggg</Text>
             <FlatList
                 data={DATA}
                 renderItem={renderItem}

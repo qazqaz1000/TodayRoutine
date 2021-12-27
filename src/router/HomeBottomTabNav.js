@@ -12,6 +12,7 @@ import HomeScreen from "../screens/HomeScreen";
 import SecondScreen from "../screens/SecondScreen";
 const Tab = createBottomTabNavigator();
 import { SafeAreaView} from "react-native";
+import FinanceScreen from "../screens/FinanceScreen";
 const HomeBottomTabNav = () => (
     <Tab.Navigator
     screenOptions={({ route }) => ({
@@ -47,7 +48,7 @@ const HomeBottomTabNav = () => (
   >
     <Tab.Screen name="Home" component={HomeStackNav} />
     <Tab.Screen name="Discovery" component={SecondScreen} initialParams={{test:1}}/>
-    <Tab.Screen name="Post" component={SecondScreen} initialParams={{test:2}} />
+    <Tab.Screen name="Post" component={FinanceScreen} initialParams={{test:2}} />
     <Tab.Screen name="Notifications" component={HomeScreen} />
     <Tab.Screen name="Profile" component={SecondScreen} />
   </Tab.Navigator>
