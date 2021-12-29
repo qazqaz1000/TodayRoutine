@@ -13,6 +13,10 @@ const styles = StyleSheet.create({
     title: {
       fontSize: 32,
     },
+    cardContainer:{
+      flexDirection : 'row',
+      justifyContent: 'space-between',
+    }
   });
 
   export default styles;

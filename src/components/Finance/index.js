@@ -47,8 +47,11 @@ const Item = ({ item, onPress, backgroundColor, textColor }) => {
 
     return (
         <TouchableOpacity onPress={onPress} style={[styles.item, backgroundColor]}>
-            <Text style={[styles.title, textColor]}>{item.id}</Text>
-            <Text style={[styles.title, textColor]}>{curPrice}</Text>
+            <View style={styles.cardContainer}>
+                <Text style={[styles.title, textColor]}>{item.id}</Text>
+                <Text style={[styles.title, textColor]}>{curPrice}</Text>
+            </View>
+
         </TouchableOpacity>
     );
 }
@@ -64,8 +67,10 @@ const Finance = ({theme}) => {
 
 
     const renderItem = ({ item }) => {
-        const backgroundColor = item.id === selectedId ? "#6e3b6e" : theme;
-        const color = item.id === selectedId ? 'white' : 'black';
+        // const backgroundColor = item.id === selectedId ? "#6e3b6e" : theme;
+        // const color = item.id === selectedId ? 'white' : 'black';
+        const backgroundColor = theme;
+        const color = item.id === selectedId ? 'white' : '#cccccc';
 
         return (
             <Item
